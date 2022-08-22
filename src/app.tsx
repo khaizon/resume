@@ -20,9 +20,12 @@ export function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/app.tsx</code> and save to test HMR
-        </p>
+        <div class="font-size-300 italic">
+          Dylan
+        </div>
+        <div class="font-weight-400 font-size-500">
+          Cheong
+        </div>
       </div>
       <p class="read-the-docs">
         Click on the Vite and Preact logos to learn more
