@@ -1,0 +1,45 @@
+.biography {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.biography-left {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.number-and-tabs {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs {
+  font-family: Poppins;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 4.7px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.biography-right {
+  flex-grow: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 4em;
+}
+.biography-text {
+  width: 100%;
+  font-family: Lato;
+  font-size: 0.9em;
+}

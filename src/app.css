@@ -1,39 +1,110 @@
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.landing-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.preact:hover {
-  filter: drop-shadow(0 0 2em #673ab8aa);
-}
-
-.card {
-  padding: 2em;
+.cover {
+  display: flex;
+  background-color: var(--background);
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  gap: 2em;
+  margin-bottom: 2em;
 }
 
-.read-the-docs {
+.menubar {
+  position: absolute;
+  height: 2em;
+  background-color: var(--background);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
+}
+
+.menubar-title {
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 1em;
+  display: flex;
+}
+
+.profile-pic {
+  height: 100%;
+  width: 600px;
+}
+
+.profile-pic img {
+  height: 100%;
+  width: 700px;
+  object-fit: cover;
+}
+
+.profile-title {
+  font-family: Poppins;
   color: var(--blue);
+  height: 1em;
+  letter-spacing: 4.8px;
 }
 
-.font-size-300 {
+.name-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name-top {
   font-size: 5rem;
-  font-weight: 500;
-}
-
-.italic {
+  line-height: 5.5rem;
   font-style: italic;
 }
 
-.font-size-500 {
+.name-bottom {
   font-size: 8rem;
   line-height: 8rem;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.panel-title {
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 10.7px;
+}
+.panel-subtitle {
+  font-family: Poppins;
+  color: var(--blue);
+  font-size: 0.8em;
+  line-height: 0.8em;
+  height: 1em;
+  letter-spacing: 4.8px;
+}
+
+.panel-number {
+  font-family: "Cinzel", Sans-serif;
+  font-size: 300px;
+  font-weight: 900;
+  line-height: 1em;
+  background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img3.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
