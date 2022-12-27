@@ -52,9 +52,9 @@ export default function Projects() {
       </div>
       <div className="projects-bottom">
         {projects.map((project, index) => (
-          <div className="project">
+          <div className="project" key={index}>
             <div className="project-image">
-              <img src={project.image} alt="project" />
+              <img src={import.meta.env.BASE_URL + project.image} alt="project" />
             </div>
             <div className="project-text">
               <div className="project-title">{project.title}</div>

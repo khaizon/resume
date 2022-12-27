@@ -23,7 +23,7 @@ export default function Biography() {
           <div
             className="panel-number image-text"
             style={{
-              backgroundImage: `url(/profilepic.jpeg)`,
+              backgroundImage: `url(${import.meta.env.BASE_URL}/profilepic.jpeg)`,
             }}
           >
             01

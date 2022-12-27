@@ -14,7 +14,7 @@ export default function App() {
       </div>
       <div className="cover">
         <div className="profile-pic">
-          <img src="/profilepic.jpeg" />
+          <img src={`${import.meta.env.BASE_URL}/profilepic.jpeg`} />
         </div>
         <div className="name-box image-text">
           <div className="name-top ">Toh</div>
