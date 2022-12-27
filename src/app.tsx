@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Biography from "./layout/biography";
+import Biography from "./layout/Biography";
+import Projects from "./layout/Projects";
 
 export default function App() {
   return (
@@ -15,13 +16,14 @@ export default function App() {
         <div className="profile-pic">
           <img src="/profilepic.jpeg" />
         </div>
-        <div className="name-box">
-          <div className="name-top">Toh</div>
+        <div className="name-box image-text">
+          <div className="name-top ">Toh</div>
           <div className="name-bottom">KaiFeng</div>
           <div className="profile-title">FULL STACK SOFTWARE ENGINEER</div>
         </div>
       </div>
       <Biography />
+      <Projects />
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.panel-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-title {
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 10.7px;
+}
+
+.panel-subtitle {
+  font-family: Poppins;
+  color: var(--blue);
+  font-size: 0.8em;
+  line-height: 0.8em;
+  height: 1em;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.divider-line {
+  width: 100%;
+  border-bottom: 2px solid rgba(50, 50, 50, 70);
+}
+
+.divider-block {
+  width: 5em;
+  border-bottom: 10px solid var(--blue);
+}

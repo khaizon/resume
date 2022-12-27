@@ -56,6 +56,10 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img2.jpg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .name-top {
@@ -71,22 +75,6 @@
 
 .blue {
   color: var(--blue);
-}
-
-.panel-title {
-  font-size: 2em;
-  line-height: 2em;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 10.7px;
-}
-.panel-subtitle {
-  font-family: Poppins;
-  color: var(--blue);
-  font-size: 0.8em;
-  line-height: 0.8em;
-  height: 1em;
-  letter-spacing: 4.8px;
 }
 
 .panel-number {

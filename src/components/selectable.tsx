@@ -1,4 +1,5 @@
 import React from "react";
+import "./selectable.css";
 
 interface SelectableProps {
   isSelected: boolean;
@@ -8,7 +9,13 @@ interface SelectableProps {
 
 export default function Selectable(props: SelectableProps) {
   return (
-    <div onClick={props.onClick} style={{ color: props.isSelected ? "var(--blue)" : "white" }}>
+    <div
+      className="selectable"
+      onClick={props.onClick}
+      style={{
+        color: props.isSelected ? "var(--blue)" : "white",
+      }}
+    >
       {props.children}
     </div>
   );
