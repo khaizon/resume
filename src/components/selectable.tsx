@@ -1,7 +1,9 @@
+import React from "react";
+
 interface SelectableProps {
   isSelected: boolean;
-  children: preact.ComponentChildren;
-  onClick: (event: Event) => void;
+  children: React.ReactNode;
+  onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
 export default function Selectable(props: SelectableProps) {

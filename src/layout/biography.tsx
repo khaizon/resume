@@ -1,13 +1,13 @@
 import "./biography.css";
 import Divider from "../components/divider";
 import Selectable from "../components/selectable";
-import { useState } from "preact/hooks";
-
+import { useState } from "react";
+import React from "react";
 export default function Biography() {
   const [currentTab, changeTab] = useState(0);
 
   return (
-    <div class="biography">
+    <div className="biography">
       <div className="biography-left">
         <div className="number-and-tabs">
           <div className="panel-number image-text">01</div>
@@ -26,10 +26,10 @@ export default function Biography() {
           </div>
         </div>
       </div>
-      <div class="biography-right">
+      <div className="biography-right">
         <div className="panel-title-block">
-          <div class="panel-subtitle">MY CAREER</div>
-          <div class="panel-title">MY BIOGRAPHY</div>
+          <div className="panel-subtitle">MY CAREER</div>
+          <div className="panel-title">MY BIOGRAPHY</div>
           <Divider alignLeft />
         </div>
         <div className="biography-text">

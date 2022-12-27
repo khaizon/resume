@@ -1,4 +1,5 @@
 import "./divider.css";
+import React from "react";
 
 interface DividerProps {
   alignLeft: boolean;
