@@ -34,19 +34,21 @@ export default function Projects() {
   return (
     <div className="projects">
       <div className="projects-top">
-        <div className="projects-topleft">
-          <PanelTitle alignLeft={false} subtitle="Latest Works" title="My Projects" />
+        <div className="projects-title">
+          <PanelTitle
+            alignLeft={false}
+            subtitle="Latest Works"
+            title="My Projects"
+          />
         </div>
-        <div className="projects-topright">
-          <div className="number-and-tabs">
-            <div
-              className="panel-number image-text"
-              style={{
-                backgroundImage: `url(${import.meta.env.BASE_URL}/yp.jpeg)`,
-              }}
-            >
-              02
-            </div>
+        <div className="projects-number">
+          <div
+            className="panel-number image-text"
+            style={{
+              backgroundImage: `url(${import.meta.env.BASE_URL}/yp.jpeg)`,
+            }}
+          >
+            02
           </div>
         </div>
       </div>
@@ -54,7 +56,10 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div className="project" key={index}>
             <div className="project-image">
-              <img src={import.meta.env.BASE_URL + project.image} alt="project" />
+              <img
+                src={import.meta.env.BASE_URL + project.image}
+                alt="project"
+              />
             </div>
             <div className="project-text">
               <div className="project-title">{project.title}</div>

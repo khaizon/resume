@@ -18,49 +18,57 @@ export default function Biography() {
   const [currentTab, changeTab] = useState(0);
   return (
     <div className="biography">
-      <div className="biography-left">
-        <div className="number-and-tabs">
-          <div
-            className="panel-number image-text"
-            style={{
-              backgroundImage: `url(${import.meta.env.BASE_URL}/profilepic.jpeg)`,
-            }}
-          >
-            01
-          </div>
-          <div className="tabs">
-            <Selectable
-              isSelected={currentTab === 0}
-              onClick={() => {
-                changeTab(0);
-              }}
-            >
-              About Me
-            </Selectable>
-            <Selectable
-              isSelected={currentTab === 1}
-              onClick={() => {
-                changeTab(1);
-              }}
-            >
-              Beginning
-            </Selectable>
-            <Selectable
-              isSelected={currentTab === 2}
-              onClick={() => {
-                changeTab(2);
-              }}
-            >
-              Career
-            </Selectable>
-          </div>
+      <div className="biography-number">
+        <div
+          className="panel-number image-text"
+          style={{
+            backgroundImage: `url(${import.meta.env.BASE_URL}/profilepic.jpeg)`,
+          }}
+        >
+          01
         </div>
       </div>
-      <div className="biography-right">
-        <PanelTitle alignLeft subtitle={tabMapper[currentTab]} title="My Biography" />
-        {currentTab === 0 && <div className="biography-text">{ABOUT_ME_TEXT}</div>}
-        {currentTab === 1 && <div className="biography-text">{BIOGRAPHY_TEXT}</div>}
-        {currentTab === 2 && <div className="biography-text">{CAREER_TEXT}</div>}
+      <div className="tab-selector">
+        <Selectable
+          isSelected={currentTab === 0}
+          onClick={() => {
+            changeTab(0);
+          }}
+        >
+          About Me
+        </Selectable>
+        <Selectable
+          isSelected={currentTab === 1}
+          onClick={() => {
+            changeTab(1);
+          }}
+        >
+          Beginning
+        </Selectable>
+        <Selectable
+          isSelected={currentTab === 2}
+          onClick={() => {
+            changeTab(2);
+          }}
+        >
+          Career
+        </Selectable>
+      </div>
+      <div className="tabs-view">
+        <PanelTitle
+          alignLeft
+          subtitle={tabMapper[currentTab]}
+          title="My Biography"
+        />
+        {currentTab === 0 && (
+          <div className="biography-text">{ABOUT_ME_TEXT}</div>
+        )}
+        {currentTab === 1 && (
+          <div className="biography-text">{BIOGRAPHY_TEXT}</div>
+        )}
+        {currentTab === 2 && (
+          <div className="biography-text">{CAREER_TEXT}</div>
+        )}
       </div>
     </div>
   );
