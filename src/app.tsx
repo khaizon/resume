@@ -1,7 +1,7 @@
-import React from "react";
-import "./App.css";
-import Biography from "./layout/Biography";
-import Projects from "./layout/Projects";
+import React from 'react';
+import './App.css';
+import Biography from './layout/Biography';
+import Projects from './layout/Projects';
 
 export default function App() {
   return (

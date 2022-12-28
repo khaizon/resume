@@ -1,6 +1,6 @@
-import "./Projects.css";
-import Divider from "../components/PanelTitle";
-import PanelTitle from "../components/PanelTitle";
+import './Projects.css';
+import Divider from '../components/PanelTitle';
+import PanelTitle from '../components/PanelTitle';
 
 interface project {
   title: string;
@@ -11,22 +11,22 @@ interface project {
 
 const projects: Array<project> = [
   {
-    title: "Capstone",
-    description: "A Yelp clone built with React and Typescript",
-    date: "07 Jan 2022",
-    image: "/capstone.png",
+    title: 'Capstone',
+    description: 'A Yelp clone built with React and Typescript',
+    date: '07 Jan 2022',
+    image: '/capstone.png',
   },
   {
-    title: "Yelpington",
-    description: "A Yelp clone built with React and Typescript",
-    date: "07 Jan 2022",
-    image: "/yp.jpeg",
+    title: 'Yelpington',
+    description: 'A Yelp clone built with React and Typescript',
+    date: '07 Jan 2022',
+    image: '/yp.jpeg',
   },
   {
-    title: "Yelpington",
-    description: "A Yelp clone built with React and Typescript",
-    date: "07 Jan 2022",
-    image: "/yp.jpeg",
+    title: 'Yelpington',
+    description: 'A Yelp clone built with React and Typescript',
+    date: '07 Jan 2022',
+    image: '/yp.jpeg',
   },
 ];
 
@@ -35,11 +35,7 @@ export default function Projects() {
     <div className="projects">
       <div className="projects-top">
         <div className="projects-title">
-          <PanelTitle
-            alignLeft={false}
-            subtitle="Latest Works"
-            title="My Projects"
-          />
+          <PanelTitle alignLeft={false} subtitle="Latest Works" title="My Projects" />
         </div>
         <div className="projects-number">
           <div
@@ -56,10 +52,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div className="project" key={index}>
             <div className="project-image">
-              <img
-                src={import.meta.env.BASE_URL + project.image}
-                alt="project"
-              />
+              <img src={import.meta.env.BASE_URL + project.image} alt="project" />
             </div>
             <div className="project-text">
               <div className="project-title">{project.title}</div>

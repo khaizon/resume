@@ -5,9 +5,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: 3em 1fr 3em;
   grid-template-areas:
-    "menubar"
-    "landing-page"
-    "footer";
+    'menubar'
+    'landing-page'
+    'footer';
   background: grey;
 }
 
@@ -104,7 +104,7 @@
 
 .panel-number {
   margin-bottom: -10px;
-  font-family: "Cinzel", Sans-serif;
+  font-family: 'Cinzel', Sans-serif;
   font-size: 150px;
   font-weight: 900;
   line-height: 150px;

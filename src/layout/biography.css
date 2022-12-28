@@ -6,8 +6,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "tab-selector biography-number"
-    " tabs-view tabs-view ";
+    'tab-selector biography-number'
+    ' tabs-view tabs-view ';
   gap: 2em;
 }
 
@@ -47,8 +47,8 @@
   .biography {
     grid-template-columns: 2fr 3fr;
     grid-template-areas:
-      "biography-number tabs-view"
-      " tab-selector tabs-view ";
+      'biography-number tabs-view'
+      ' tab-selector tabs-view ';
   }
   .tab-selector {
     margin-top: -3rem;

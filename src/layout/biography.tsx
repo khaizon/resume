@@ -1,7 +1,7 @@
-import "./Biography.css";
-import PanelTitle from "../components/PanelTitle";
-import Selectable from "../components/selectable";
-import { useState } from "react";
+import './Biography.css';
+import PanelTitle from '../components/PanelTitle';
+import Selectable from '../components/selectable';
+import { useState } from 'react';
 
 const BIOGRAPHY_TEXT = `Today I’m working on my next book. I hope, it will be released this year. Except writing I also participate in many projects, meet with other writers, share my experience in my blog and organize master classes telling more about writing skills and career. I’m a member
 of US Free Writers Assosiation since 2012. From time to time I teach students in the University I
@@ -12,7 +12,7 @@ const ABOUT_ME_TEXT = `I’m a writer, blogger, and a teacher. I’m a member of
 
 const CAREER_TEXT = `Engineer`;
 
-const tabMapper = ["About Me", "Beginning", "Career"];
+const tabMapper = ['About Me', 'Beginning', 'Career'];
 
 export default function Biography() {
   const [currentTab, changeTab] = useState(0);
@@ -55,20 +55,10 @@ export default function Biography() {
         </Selectable>
       </div>
       <div className="tabs-view">
-        <PanelTitle
-          alignLeft
-          subtitle={tabMapper[currentTab]}
-          title="My Biography"
-        />
-        {currentTab === 0 && (
-          <div className="biography-text">{ABOUT_ME_TEXT}</div>
-        )}
-        {currentTab === 1 && (
-          <div className="biography-text">{BIOGRAPHY_TEXT}</div>
-        )}
-        {currentTab === 2 && (
-          <div className="biography-text">{CAREER_TEXT}</div>
-        )}
+        <PanelTitle alignLeft subtitle={tabMapper[currentTab]} title="My Biography" />
+        {currentTab === 0 && <div className="biography-text">{ABOUT_ME_TEXT}</div>}
+        {currentTab === 1 && <div className="biography-text">{BIOGRAPHY_TEXT}</div>}
+        {currentTab === 2 && <div className="biography-text">{CAREER_TEXT}</div>}
       </div>
     </div>
   );

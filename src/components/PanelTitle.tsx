@@ -1,4 +1,4 @@
-import "./PanelTitle.css";
+import './PanelTitle.css';
 
 interface DividerProps {
   alignLeft: boolean;
@@ -6,35 +6,28 @@ interface DividerProps {
   title: string;
 }
 
-export default function PanelTitle({
-  alignLeft,
-  subtitle,
-  title,
-}: DividerProps) {
+export default function PanelTitle({ alignLeft, subtitle, title }: DividerProps) {
   const moveLeft = {
-    marginRight: alignLeft ? "0px" : "5px",
+    marginRight: alignLeft ? '0px' : '5px',
   };
   return (
     <div>
       <div
         className="panel-title-block"
         style={{
-          alignItems: alignLeft ? "flex-start" : "flex-end",
-          textAlign: alignLeft ? "left" : "right",
+          alignItems: alignLeft ? 'flex-start' : 'flex-end',
+          textAlign: alignLeft ? 'left' : 'right',
         }}
       >
         <div className="panel-subtitle">{subtitle}</div>
-        <div
-          className="panel-title"
-          style={{ marginRight: alignLeft ? "0px" : "-7px" }}
-        >
+        <div className="panel-title" style={{ marginRight: alignLeft ? '0px' : '-7px' }}>
           {title}
         </div>
       </div>
       <div
         className="divider"
         style={{
-          alignItems: alignLeft ? "flex-start" : "flex-end",
+          alignItems: alignLeft ? 'flex-start' : 'flex-end',
         }}
       >
         <div className="divider-line" style={moveLeft}></div>

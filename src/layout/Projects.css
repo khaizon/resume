@@ -10,8 +10,8 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-areas:
-    "projects-number ."
-    "projects-title projects-title";
+    'projects-number .'
+    'projects-title projects-title';
   width: 100%;
   align-items: center;
   margin-bottom: 2em;

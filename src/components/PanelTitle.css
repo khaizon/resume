@@ -39,9 +39,9 @@
     text-transform: uppercase;
     letter-spacing: 10.7px;
   }
-  
+
   .panel-subtitle {
-    display:unset;
+    display: unset;
     font-family: Poppins;
     color: var(--blue);
     font-size: 0.8em;
