@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
-import Biography from './layout/Biography';
-import Projects from './layout/Projects';
+import './app.css';
+import Biography from './layout/biography';
+import Projects from './layout/projects';
 
 export default function App() {
   return (

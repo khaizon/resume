@@ -91,6 +91,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  align-items: flex-end;
   flex-direction: column;
   background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img2.jpg);
   background-position: top right;
@@ -192,7 +193,7 @@
 
   .name-box {
     justify-content: flex-end;
-    align-items: center;
+
     margin-bottom: 5rem;
     margin-left: max(-500px, 100% - 700px);
   }
@@ -209,7 +210,6 @@
 
   .profile-title {
     font-size: 1rem;
-    width: 30em;
   }
 
   .panel-number {

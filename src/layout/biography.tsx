@@ -1,5 +1,5 @@
-import './Biography.css';
-import PanelTitle from '../components/PanelTitle';
+import './biography.css';
+import PanelTitle from '../components/panelTitle';
 import Selectable from '../components/selectable';
 import { useState } from 'react';
 
