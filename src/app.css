@@ -9,6 +9,7 @@
     'landing-page'
     'footer';
   background: grey;
+  z-index: -1;
 }
 
 .menubar {
@@ -51,17 +52,20 @@
 }
 
 .profile-pic {
-  /* height: 100%; */
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-pic img {
+  height: 300px;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   filter: gray;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
-  z-index: -1;
+  z-index: 0;
 }
 
 .profile-title {
@@ -134,7 +138,17 @@
   z-index: 1;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 800px) {
+  .profile-pic img {
+    height: 500px;
+    width: min(90%, 1000px);
+  }
+  .panel-number {
+    font-size: 200px;
+    line-height: 200px;
+  }
+}
+@media screen and (min-width: 900px) {
   .name-top {
     font-size: 5rem;
     line-height: 5.5rem;

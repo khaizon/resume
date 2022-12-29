@@ -49,19 +49,17 @@ export default function Projects() {
         </div>
       </div>
       <div className="projects-bottom">
-        {projects.map((project, index) => (
-          <div className="project" key={index}>
-            <div className="project-image">
-              <img src={import.meta.env.BASE_URL + project.image} alt="project" />
-            </div>
-            <div className="project-text">
-              <div className="project-title">{project.title}</div>
-              <div className="project-description">{project.description}</div>
-              <div className="project-divider" />
-              <div className="project-date">{project.date}</div>
-            </div>
-          </div>
-        ))}
+        {projects.map((project, index) => [
+          <div className="project-image" key={index + '1'}>
+            <img src={import.meta.env.BASE_URL + project.image} alt="project" />
+          </div>,
+          <div className="project-text" key={index + '2'}>
+            <div className="project-name">{project.title}</div>
+            <div className="project-description">{project.description}</div>
+            <div className="project-divider" />
+            <div className="project-date">{project.date}</div>
+          </div>,
+        ])}
       </div>
       <button className="view-all-button">View All</button>
     </div>

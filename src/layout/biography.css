@@ -9,11 +9,11 @@
   padding: 3rem;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-    'tab-selector biography-number'
-    ' tabs-view tabs-view';
-  gap: 2em;
+    'biography-number tab-selector'
+    'tabs-view tabs-view ';
+  column-gap: 2em;
 }
 
 .biography-number {
@@ -29,12 +29,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
   gap: 0.8em;
 }
 
 .tabs-view {
-  margin-top: -3rem;
   grid-area: tabs-view;
   height: 100%;
   justify-content: flex-start;
@@ -50,16 +48,32 @@
 
 @media screen and (min-width: 550px) {
   .biography-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      '. biography-number tab-selector'
+      'tabs-view tabs-view tabs-view ';
+  }
+  .tab-selector {
+    letter-spacing: 4.7px;
+    justify-content: center;
+  }
+  .tabs-view {
+    margin-top: -1rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .biography-grid {
     width: min(90%, 1000px);
     grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       'biography-number tabs-view'
       ' tab-selector tabs-view ';
   }
   .tab-selector {
-    margin-top: -3rem;
     letter-spacing: 4.7px;
     align-items: center;
+    justify-content: flex-start;
   }
   .tabs-view {
     margin-top: 0;
