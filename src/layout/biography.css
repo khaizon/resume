@@ -61,6 +61,7 @@
     margin-top: -1rem;
   }
 }
+
 @media screen and (min-width: 800px) {
   .biography-grid {
     width: min(90%, 1000px);

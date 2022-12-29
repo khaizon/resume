@@ -20,7 +20,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0 0.5em; */
+  padding: 0.5em;
+  box-sizing: border-box;
   z-index: 1;
 }
 
@@ -41,17 +42,23 @@
 }
 
 .cover {
-  display: flex;
-  flex-wrap: wrap;
   background-color: var(--background);
-  align-items: center;
+  display: flex;
   justify-content: center;
+}
+
+.cover-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'name-box' 'profile-pic';
   gap: 2em;
   padding: 2em;
   box-sizing: border-box;
 }
 
 .profile-pic {
+  grid-area: profile-pic;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -74,14 +81,15 @@
   line-height: 0.8rem;
   font-size: 0.8rem;
   letter-spacing: 4.8px;
-  text-align: left;
+  text-align: right;
   margin-left: 5px;
   width: 17em;
 }
 
 .name-box {
+  grid-area: name-box;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
   background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img2.jpg);
@@ -99,7 +107,7 @@
 
 .name-bottom {
   font-size: 5rem;
-  line-height: 5rem;
+  line-height: 7rem;
 }
 
 .blue {
@@ -109,9 +117,9 @@
 .panel-number {
   margin-bottom: -10px;
   font-family: 'Cinzel', Sans-serif;
-  font-size: 150px;
+  font-size: 140px;
   font-weight: 900;
-  line-height: 150px;
+  line-height: 140px;
   background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img3.png);
   background-position: center center;
   background-repeat: no-repeat;
@@ -129,26 +137,65 @@
 
 .footer {
   grid-area: footer;
+  font-family: Poppins;
   height: 100%;
   width: 100%;
   background-color: var(--background);
+  fill: aliceblue;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1em;
   align-items: center;
   z-index: 1;
+  padding: 0.5em;
+  box-sizing: border-box;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 550px) {
+  .cover-grid {
+    width: min(90%, 1200px);
+    grid-template-columns: 1fr;
+    grid-template-areas: 'name-box' 'profile-pic';
+    gap: 0px;
+  }
+  .name-box {
+    justify-content: flex-end;
+    margin-bottom: 5rem;
+    margin-left: max(-200px, 100% - 700px);
+  }
   .profile-pic img {
-    height: 500px;
-    width: min(90%, 1000px);
+    height: 50vw;
+    width: 500px;
+    margin-top: -20vw;
   }
   .panel-number {
     font-size: 200px;
     line-height: 200px;
   }
 }
-@media screen and (min-width: 900px) {
+
+@media screen and (min-width: 800px) {
+  .cover-grid {
+    width: min(90%, 1200px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'profile-pic name-box';
+  }
+
+  .profile-pic {
+    align-items: flex-end;
+  }
+  .profile-pic img {
+    height: 600px;
+    width: 650px;
+    margin-top: 0px;
+  }
+
+  .name-box {
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin-left: max(-500px, 100% - 700px);
+  }
   .name-top {
     font-size: 5rem;
     line-height: 5.5rem;
