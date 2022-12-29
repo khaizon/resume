@@ -137,12 +137,11 @@
 }
 
 .footer {
-  grid-area: footer;
-  font-family: Poppins;
   height: 100%;
   width: 100%;
+  grid-area: footer;
+  font-family: Poppins;
   background-color: var(--background);
-  fill: aliceblue;
   display: flex;
   justify-content: center;
   gap: 1em;
@@ -150,6 +149,16 @@
   z-index: 1;
   padding: 0.5em;
   box-sizing: border-box;
+}
+
+.footer a {
+  fill: white;
+  display: flex;
+  align-items: center;
+}
+
+.footer a:hover {
+  fill: var(--blue);
 }
 
 @media screen and (min-width: 550px) {
@@ -193,9 +202,9 @@
 
   .name-box {
     justify-content: flex-end;
-
     margin-bottom: 5rem;
     margin-left: max(-500px, 100% - 700px);
+    align-items: center;
   }
   .name-top {
     font-size: 5rem;
@@ -210,6 +219,8 @@
 
   .profile-title {
     font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
   }
 
   .panel-number {
