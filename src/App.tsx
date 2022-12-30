@@ -1,8 +1,8 @@
 import './app.css';
 import Icon from './icons/icon';
 
-import Biography from './layout/biography';
-import Projects from './layout/projects';
+import Biography from './layout/Biography';
+import Projects from './layout/Projects';
 
 export default function App() {
   return (

@@ -1,6 +1,6 @@
-import './biography.css';
-import PanelTitle from '../components/panelTitle';
-import Selectable from '../components/selectable';
+import './Biography.css';
+import PanelTitle from '../components/PanelTitle';
+import Selectable from '../components/Selectable';
 import { useState } from 'react';
 
 const EDUCATION_TEXT = `VJC, SUTD, SMU`;

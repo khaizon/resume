@@ -1,6 +1,5 @@
 import './Projects.css';
-import Divider from '../components/panelTitle';
-import PanelTitle from '../components/panelTitle';
+import PanelTitle from '../components/PanelTitle';
 
 interface project {
   title: string;
