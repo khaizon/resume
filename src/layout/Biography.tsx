@@ -1,10 +1,10 @@
 import './Biography.css';
 import PanelTitle from '../components/PanelTitle';
 import Selectable from '../components/Selectable';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
+import SwiperCore, { Autoplay, Pagination } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -20,6 +20,10 @@ const tabMapper = ['About Me', 'Education', 'Career'];
 
 export default function Biography() {
   const [currentTab, changeTab] = useState(0);
+
+  const [swiper, updateSwiper] = useState<any | null>(null);
+
+  // SwiperCore.use([Autoplay]);
 
   return (
     <div className="biography">
@@ -39,6 +43,7 @@ export default function Biography() {
             <Selectable
               isSelected={currentTab === index}
               onClick={() => {
+                swiper.slideTo(index);
                 changeTab(index);
               }}
               key={index}
@@ -47,28 +52,29 @@ export default function Biography() {
             </Selectable>
           ))}
         </div>
-        {/* <div className="tabs-view">
-          <PanelTitle alignLeft subtitle={tabMapper[currentTab]} title="My Biography" />
-          {currentTab === 0 && <div className="biography-text">{ABOUT_ME_TEXT}</div>}
-          {currentTab === 1 && <div className="biography-text">{EDUCATION_TEXT}</div>}
-          {currentTab === 2 && <div className="biography-text">{CAREER_TEXT}</div>}
-        </div> */}
         <div className="tabs-view">
           <PanelTitle alignLeft subtitle={tabMapper[currentTab]} title="My Biography" />
           <Swiper
+            onSwiper={updateSwiper}
             onSlideChange={(e) => changeTab(e.activeIndex)}
             pagination={{
               dynamicBullets: true,
             }}
-            modules={[Pagination]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Pagination, Autoplay]}
           >
             <SwiperSlide>
               <div className="biography-text">{ABOUT_ME_TEXT}</div>
             </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            ...
+            <SwiperSlide>
+              <div className="biography-text">{EDUCATION_TEXT}</div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="biography-text">{CAREER_TEXT}</div>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>
