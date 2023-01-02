@@ -34,9 +34,15 @@
   height: 100% !important;
 }
 
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
 .swiper-pagination-bullet {
   background-color: white !important;
+  opacity: 1;
 }
+
 .swiper-pagination-bullet-active {
   background-color: var(--blue) !important;
 }
@@ -87,6 +93,7 @@
   width: 100%;
   font-family: Lato;
   font-size: 0.9em;
+  margin-bottom: 4rem;
 }
 
 @media screen and (min-width: 550px) {
