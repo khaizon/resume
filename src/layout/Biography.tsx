@@ -1,10 +1,10 @@
 import './Biography.css';
 import PanelTitle from '../components/PanelTitle';
 import Selectable from '../components/Selectable';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, Pagination } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';

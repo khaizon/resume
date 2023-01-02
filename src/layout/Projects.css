@@ -64,14 +64,17 @@
   align-items: center;
   margin-top: 1em;
 }
+
+.project-text:hover {
+  cursor: pointer;
+  color: var(--blue);
+}
 .project-name {
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 4.7px;
   margin-bottom: 0.5em;
-  background-color: var(--background);
   padding: 3px 8px;
-  color: white;
 }
 
 .project-divider {

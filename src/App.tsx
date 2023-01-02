@@ -1,8 +1,6 @@
+import { Outlet } from 'react-router-dom';
 import './app.css';
 import Icon from './icons/icon';
-
-import Biography from './layout/Biography';
-import Projects from './layout/Projects';
 
 export default function App() {
   return (
@@ -13,22 +11,7 @@ export default function App() {
           KAI FENG
         </div>
       </div>
-      <div className="landing-page">
-        <div className="cover">
-          <div className="cover-grid">
-            <div className="profile-pic">
-              <img src={`${import.meta.env.BASE_URL}/profilemasked.png`} />
-            </div>
-            <div className="name-box image-text">
-              <div className="name-top ">Toh</div>
-              <div className="name-bottom">KaiFeng</div>
-              <div className="profile-title">FULL STACK SOFTWARE ENGINEER</div>
-            </div>
-          </div>
-        </div>
-        <Biography />
-        <Projects />
-      </div>
+      <Outlet />
       <div className="footer">
         Happy to connect on:
         <Icon link="https://www.linkedin.com/in/kai-feng-toh/" variant="linkedin" />

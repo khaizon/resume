@@ -1,5 +1,6 @@
 import './Projects.css';
 import PanelTitle from '../components/PanelTitle';
+import { redirect, useNavigate } from 'react-router-dom';
 
 interface project {
   title: string;
@@ -10,7 +11,7 @@ interface project {
 
 const projects: Array<project> = [
   {
-    title: 'Capstone',
+    title: 'Panorama',
     description: 'A Yelp clone built with React and Typescript',
     date: '07 Jan 2022',
     image: '/capstone.png',
@@ -30,6 +31,8 @@ const projects: Array<project> = [
 ];
 
 export default function Projects() {
+  const navigate = useNavigate();
+
   return (
     <div className="projects">
       <div className="projects-top">
@@ -52,7 +55,13 @@ export default function Projects() {
           <div className="project-image" key={index + '1'}>
             <img src={import.meta.env.BASE_URL + project.image} alt="project" />
           </div>,
-          <div className="project-text" key={index + '2'}>
+          <div
+            className="project-text"
+            key={index + '2'}
+            onClick={() => {
+              navigate(import.meta.env.BASE_URL + `projects/${project.title}`);
+            }}
+          >
             <div className="project-name">{project.title}</div>
             <div className="project-description">{project.description}</div>
             <div className="project-divider" />

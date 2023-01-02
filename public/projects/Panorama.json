@@ -1,0 +1,19 @@
+{
+  "title": "Panorama",
+  "subtitle": "A chatbot-dashboard hybrid for line managers at Collins Aerospace",
+  "gallery": [
+    {
+      "image": "/capstone.png",
+      "description": "Description 1"
+    },
+    {
+      "image": "/yp.jpeg",
+      "description": "Description 2"
+    },
+    {
+      "image": "/profilepic.jpeg",
+      "description": "Description 3"
+    }
+  ],
+  "description": "This is a description of the project"
+}
