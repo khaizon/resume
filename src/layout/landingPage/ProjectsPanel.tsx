@@ -69,7 +69,14 @@ export default function ProjectsPanel() {
           </div>,
         ])}
       </div>
-      <button className="view-all-button">View All</button>
+      <button
+        className="view-all-button"
+        onClick={() => {
+          navigate(import.meta.env.BASE_URL + 'projects');
+        }}
+      >
+        View All
+      </button>
     </div>
   );
 }

@@ -38,6 +38,24 @@
   cursor: pointer;
 }
 
+.menubar-options {
+  text-decoration: none;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menubar-options:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: var(--blue);
+}
+
 .landing-page {
   grid-area: landing-page;
   overflow-y: auto;

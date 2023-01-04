@@ -1,10 +1,11 @@
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, NavLink, useLocation } from 'react-router-dom';
 import './App.css';
 import Icon from './icons/icon';
 
 export default function App() {
   const navigate = useNavigate();
-
+  const location = useLocation();
+  const activeClassName = 'active';
   return (
     <div className="landing-page-parent">
       <div className="menubar">
@@ -16,6 +17,24 @@ export default function App() {
         >
           <div className="blue">TOH&nbsp;</div>
           KAI FENG
+        </div>
+        <div className="menubar-options">
+          <div
+            onClick={() => {
+              navigate(import.meta.env.BASE_URL);
+            }}
+            className={location.pathname === import.meta.env.BASE_URL ? 'active' : ''}
+          >
+            HOME
+          </div>
+          <div
+            onClick={() => {
+              navigate(import.meta.env.BASE_URL + 'projects');
+            }}
+            className={location.pathname === import.meta.env.BASE_URL + 'projects' ? 'active' : ''}
+          >
+            PROJECTS
+          </div>
         </div>
       </div>
       <Outlet />

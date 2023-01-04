@@ -16,7 +16,7 @@ export default function Projects() {
     <div className="projects">
       <div className="projects-top">
         <div className="projects-title">
-          <PanelTitle alignLeft={false} subtitle="Latest Works" title="My Projects" />
+          <PanelTitle alignLeft={false} subtitle="All Projects" title="My Projects" />
         </div>
         <div className="projects-number">
           <div
@@ -48,7 +48,6 @@ export default function Projects() {
           </div>,
         ])}
       </div>
-      <button className="view-all-button">View All</button>
     </div>
   );
 }
