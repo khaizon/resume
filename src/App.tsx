@@ -1,12 +1,19 @@
-import { Outlet } from 'react-router-dom';
-import './app.css';
+import { Outlet, useNavigate } from 'react-router-dom';
+import './App.css';
 import Icon from './icons/icon';
 
 export default function App() {
+  const navigate = useNavigate();
+
   return (
     <div className="landing-page-parent">
       <div className="menubar">
-        <div className="menubar-title">
+        <div
+          className="menubar-title"
+          onClick={() => {
+            navigate(import.meta.env.BASE_URL);
+          }}
+        >
           <div className="blue">TOH&nbsp;</div>
           KAI FENG
         </div>

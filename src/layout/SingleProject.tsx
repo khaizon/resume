@@ -4,11 +4,10 @@ import { useLoaderData } from 'react-router-dom';
 import { SwiperSlide, Swiper } from 'swiper/react';
 
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
-import { Navigation, Thumbs } from 'swiper';
-import { useState } from 'react';
+import { Mousewheel, Navigation, Scrollbar, Thumbs } from 'swiper';
+import { useEffect, useState } from 'react';
 
 export const getProject = async ({ params }: any) => {
   const response = await fetch(`${import.meta.env.BASE_URL}/projects/${params.id}.json`);
@@ -24,6 +23,12 @@ export default function SingleProject() {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   // get project from database
   const { project }: any = useLoaderData();
+
+  const [isBigScreen, setIsBigScreen] = useState(window.matchMedia('(min-width: 800px)').matches);
+
+  useEffect(() => {
+    window.matchMedia('(min-width: 800px)').addEventListener('change', (e) => setIsBigScreen(e.matches));
+  }, []);
 
   return (
     <div className="project-grid">
@@ -73,24 +78,29 @@ export default function SingleProject() {
           </svg>
         </div>
       </div>
-      <Swiper
-        onSwiper={(swiper) => {
-          console.log('swiper:', swiper);
-          setActiveThumb(swiper);
-        }}
-        spaceBetween={10}
-        slidesPerView="auto"
-        modules={[Navigation, Thumbs]}
-        className="product-images-slider-thumbs"
-      >
-        {project.gallery.map((project: any, index: number) => (
-          <SwiperSlide key={index}>
-            <div className="product-images-slider-thumbs-wrapper">
-              <img src={import.meta.env.BASE_URL + `${project.image}`} key={index} />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="thumbnail-wrapper">
+        <Swiper
+          onSwiper={(swiper) => {
+            console.log('swiper:', swiper);
+            setActiveThumb(swiper);
+          }}
+          spaceBetween={10}
+          mousewheel={true}
+          scrollbar={{ draggable: true }}
+          direction={isBigScreen ? 'vertical' : 'horizontal'}
+          slidesPerView="auto"
+          modules={[Navigation, Thumbs, Mousewheel, Scrollbar]}
+          className="product-images-slider-thumbs"
+        >
+          {project.gallery.map((project: any, index: number) => (
+            <SwiperSlide key={index}>
+              <div className="product-images-slider-thumbs-wrapper">
+                <img src={import.meta.env.BASE_URL + `${project.image}`} key={index} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <div className="project-description">{project.description}</div>
     </div>
   );

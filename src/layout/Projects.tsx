@@ -1,6 +1,6 @@
 import './Projects.css';
 import PanelTitle from '../components/PanelTitle';
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface project {
   title: string;
