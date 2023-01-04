@@ -9,31 +9,33 @@ export default function App() {
   return (
     <div className="landing-page-parent">
       <div className="menubar">
-        <div
-          className="menubar-title"
-          onClick={() => {
-            navigate(import.meta.env.BASE_URL);
-          }}
-        >
-          <div className="blue">TOH&nbsp;</div>
-          KAI FENG
-        </div>
-        <div className="menubar-options">
+        <div className="menubar-container">
           <div
+            className="menubar-title"
             onClick={() => {
               navigate(import.meta.env.BASE_URL);
             }}
-            className={location.pathname === import.meta.env.BASE_URL ? 'active' : ''}
           >
-            HOME
+            <div className="blue">TOH&nbsp;</div>
+            KAI FENG
           </div>
-          <div
-            onClick={() => {
-              navigate(import.meta.env.BASE_URL + 'projects');
-            }}
-            className={location.pathname === import.meta.env.BASE_URL + 'projects' ? 'active' : ''}
-          >
-            PROJECTS
+          <div className="menubar-options">
+            <div
+              onClick={() => {
+                navigate(import.meta.env.BASE_URL);
+              }}
+              className={location.pathname === import.meta.env.BASE_URL ? 'active' : ''}
+            >
+              HOME
+            </div>
+            <div
+              onClick={() => {
+                navigate(import.meta.env.BASE_URL + 'projects');
+              }}
+              className={location.pathname === import.meta.env.BASE_URL + 'projects' ? 'active' : ''}
+            >
+              PROJECTS
+            </div>
           </div>
         </div>
       </div>

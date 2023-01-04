@@ -14,16 +14,22 @@
 }
 
 .menubar {
-  grid-area: menubar;
-  height: 100%;
   width: 100%;
   background-color: var(--background);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menubar-container {
+  grid-area: menubar;
+  padding: 0.5em;
+  height: 100%;
+  width: min(100%, 1100px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em;
   box-sizing: border-box;
-  z-index: 1;
 }
 
 .menubar-title {
