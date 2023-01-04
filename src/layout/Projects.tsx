@@ -1,14 +1,16 @@
-import { useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import PanelTitle from '../components/PanelTitle';
 
 export const getAllProjects = async () => {
   const response = await fetch(`${import.meta.env.BASE_URL}/projects/projectsData.json`);
-  const project = await response.json();
-  return { project };
+  const projects = await response.json();
+  return { projects };
 };
 
 export default function Projects() {
   const navigate = useNavigate();
+
+  const { projects }: any = useLoaderData();
 
   return (
     <div className="projects">
@@ -28,7 +30,7 @@ export default function Projects() {
         </div>
       </div>
       <div className="projects-bottom">
-        {projects.map((project, index) => [
+        {projects.map((project: any, index: number) => [
           <div className="project-image" key={index + '1'}>
             <img src={import.meta.env.BASE_URL + project.image} alt="project" />
           </div>,
