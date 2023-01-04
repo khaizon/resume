@@ -18,6 +18,7 @@
 
 .project-title {
   grid-area: project-title;
+  box-sizing: border-box;
   width: 100%;
   font-size: 4rem;
   line-height: 4rem;
@@ -28,6 +29,8 @@
 
 .project-subtitle {
   grid-area: project-subtitle;
+  box-sizing: border-box;
+
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: center;
@@ -138,6 +141,7 @@
   grid-area: divider;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   padding: 0 2rem;
 }
 

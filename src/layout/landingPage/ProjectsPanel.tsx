@@ -1,13 +1,36 @@
+import './ProjectsPanel.css';
+import PanelTitle from '../../components/PanelTitle';
 import { useNavigate } from 'react-router-dom';
-import PanelTitle from '../components/PanelTitle';
 
-export const getAllProjects = async () => {
-  const response = await fetch(`${import.meta.env.BASE_URL}/projects/projectsData.json`);
-  const project = await response.json();
-  return { project };
-};
+interface project {
+  title: string;
+  description: string;
+  date: string;
+  image: string;
+}
 
-export default function Projects() {
+const projects: Array<project> = [
+  {
+    title: 'Panorama',
+    description: 'A Yelp clone built with React and Typescript',
+    date: '07 Jan 2022',
+    image: '/capstone.png',
+  },
+  {
+    title: 'Yelpington',
+    description: 'A Yelp clone built with React and Typescript',
+    date: '07 Jan 2022',
+    image: '/yp.jpeg',
+  },
+  {
+    title: 'Yelpington',
+    description: 'A Yelp clone built with React and Typescript',
+    date: '07 Jan 2022',
+    image: '/yp.jpeg',
+  },
+];
+
+export default function ProjectsPanel() {
   const navigate = useNavigate();
 
   return (

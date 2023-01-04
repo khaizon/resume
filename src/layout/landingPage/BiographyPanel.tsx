@@ -1,6 +1,6 @@
-import './Biography.css';
-import PanelTitle from '../components/PanelTitle';
-import Selectable from '../components/Selectable';
+import './BiographyPanel.css';
+import PanelTitle from '../../components/PanelTitle';
+import Selectable from '../../components/Selectable';
 import { useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,7 +18,7 @@ const CAREER_TEXT = `Engineer`;
 
 const tabMapper = ['About Me', 'Education', 'Career'];
 
-export default function Biography() {
+export default function BiographyPanel() {
   const [currentTab, changeTab] = useState(0);
 
   const [swiper, updateSwiper] = useState<any | null>(null);

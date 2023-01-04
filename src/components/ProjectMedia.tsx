@@ -14,10 +14,10 @@ export default function ProjectMedia({ media }: ProjectMediaProps) {
   } else if (media.isLocal && media.isVideo) {
     return (
       <video width="100%" height="100%" controls>
-        <source src={media.src} type="video/mp4" />
+        <source src={import.meta.env.BASE_URL + media.src} type="video/mp4" />
       </video>
     );
   } else {
-    return <img src={media.src} alt={media.description} />;
+    return <img src={import.meta.env.BASE_URL + media.src} alt={media.description} />;
   }
 }

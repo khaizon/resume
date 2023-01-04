@@ -22,7 +22,6 @@ export default function SingleProject() {
   const [activeThumb, setActiveThumb] = useState<any | null>();
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
-  // get project from database
   const { project }: any = useLoaderData();
 
   const [isBigScreen, setIsBigScreen] = useState(window.matchMedia('(min-width: 800px)').matches);

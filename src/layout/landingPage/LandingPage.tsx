@@ -1,5 +1,5 @@
-import Biography from './Biography';
-import Projects from './Projects';
+import BiographyPanel from './BiographyPanel';
+import ProjectsPanel from './ProjectsPanel';
 
 export default function LandingPage() {
   return (
@@ -16,8 +16,8 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <Biography />
-      <Projects />
+      <BiographyPanel />
+      <ProjectsPanel />
     </div>
   );
 }
