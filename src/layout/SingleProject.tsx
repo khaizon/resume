@@ -8,6 +8,7 @@ import 'swiper/css/scrollbar';
 
 import { Mousewheel, Navigation, Scrollbar, Thumbs } from 'swiper';
 import { useEffect, useState } from 'react';
+import ProjectMedia from '../components/ProjectMedia';
 
 export const getProject = async ({ params }: any) => {
   const response = await fetch(`${import.meta.env.BASE_URL}/projects/${params.id}.json`);
@@ -34,7 +35,10 @@ export default function SingleProject() {
     <div className="project-grid">
       <div className="project-title">{project.title}</div>
       <div className="project-subtitle">{project.subtitle}</div>
-      <div className="divider" />
+      <div className="divider">
+        <div className="divider-line"></div>
+        <div className="divider-block"></div>
+      </div>
       <div className="project-gallery">
         <div
           className={'nav-button ' + (slideIndex === 0 && 'disabled-button')}
@@ -62,7 +66,7 @@ export default function SingleProject() {
         >
           {project.gallery.map((project: any, index: number) => (
             <SwiperSlide key={index}>
-              <img src={import.meta.env.BASE_URL + `${project.image}`} key={index} />
+              <ProjectMedia media={project} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -81,7 +85,6 @@ export default function SingleProject() {
       <div className="thumbnail-wrapper">
         <Swiper
           onSwiper={(swiper) => {
-            console.log('swiper:', swiper);
             setActiveThumb(swiper);
           }}
           spaceBetween={10}
@@ -95,7 +98,7 @@ export default function SingleProject() {
           {project.gallery.map((project: any, index: number) => (
             <SwiperSlide key={index}>
               <div className="product-images-slider-thumbs-wrapper">
-                <img src={import.meta.env.BASE_URL + `${project.image}`} key={index} />
+                <img src={import.meta.env.BASE_URL + `${project.thumbnail}`} key={index} />
               </div>
             </SwiperSlide>
           ))}
