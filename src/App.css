@@ -19,6 +19,8 @@
   z-index: 1;
   display: flex;
   justify-content: center;
+  font-family: Poppins;
+  font-weight: 300;
 }
 
 .menubar-container {
@@ -33,8 +35,6 @@
 }
 
 .menubar-title {
-  font-family: Poppins;
-  font-weight: 300;
   font-size: 1.2rem;
   line-height: 1rem;
   display: flex;
@@ -46,8 +46,7 @@
 
 .menubar-options {
   text-decoration: none;
-  font-family: Poppins;
-  font-weight: 300;
+
   font-size: 1.2rem;
   line-height: 1rem;
   display: flex;
@@ -147,7 +146,7 @@
 
 .panel-number {
   margin-bottom: -10px;
-  font-family: 'Cinzel', Sans-serif;
+  font-family: Cinzel, Sans-serif;
   font-size: 140px;
   font-weight: 900;
   line-height: 140px;

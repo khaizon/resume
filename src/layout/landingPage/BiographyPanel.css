@@ -92,22 +92,17 @@
   font-family: Lato, serif;
   font-size: 0.9em;
   margin-bottom: 4rem;
-  max-height: 30rem;
+  max-height: 31rem;
   overflow: scroll;
 }
 
 .biography-text .resume {
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-decoration: none !important;
-}
-
-.resume button {
-  font-family: 'Playfair Display';
-  font-size: 1.5rem;
-  height: 10rem;
 }
 
 .hobbies {
