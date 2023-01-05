@@ -9,6 +9,7 @@ import 'swiper/css/scrollbar';
 import { Mousewheel, Navigation, Scrollbar, Thumbs } from 'swiper';
 import { useEffect, useState } from 'react';
 import ProjectMedia from '../components/ProjectMedia';
+import Divider from '../components/Divider';
 
 export const getProject = async ({ params }: any) => {
   const response = await fetch(`${import.meta.env.BASE_URL}/projects/${params.id}.json`);
@@ -34,10 +35,7 @@ export default function SingleProject() {
     <div className="project-grid">
       <div className="project-title">{project.title}</div>
       <div className="project-subtitle">{project.subtitle}</div>
-      <div className="divider">
-        <div className="divider-line"></div>
-        <div className="divider-block"></div>
-      </div>
+      <Divider alignLeft padding="2rem" />
       <div className="project-gallery">
         <div
           className={'nav-button ' + (slideIndex === 0 && 'disabled-button')}

@@ -34,12 +34,12 @@ export default function ProjectsPanel() {
   const navigate = useNavigate();
 
   return (
-    <div className="projects">
-      <div className="projects-top">
-        <div className="projects-title">
+    <div className="projects-panel">
+      <div className="projects-panel-top">
+        <div className="projects-panel-title">
           <PanelTitle alignLeft={false} subtitle="Latest Works" title="My Projects" />
         </div>
-        <div className="projects-number">
+        <div className="projects-panel-number">
           <div
             className="panel-number image-text"
             style={{
@@ -50,7 +50,7 @@ export default function ProjectsPanel() {
           </div>
         </div>
       </div>
-      <div className="projects-bottom">
+      <div className="projects-panel-bottom">
         {projects.map((project, index) => [
           <div className="project-image" key={index + '1'}>
             <img src={import.meta.env.BASE_URL + project.image} alt="project" />

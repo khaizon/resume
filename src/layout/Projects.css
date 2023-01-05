@@ -1,0 +1,21 @@
+.projects {
+  background-color: var(--background);
+  padding: 1em;
+}
+
+.projects-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 4.5rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.projects-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

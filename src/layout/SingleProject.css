@@ -137,24 +137,6 @@
   justify-content: center;
 }
 
-.divider {
-  grid-area: divider;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 0 2rem;
-}
-
-.divider-line {
-  width: 100%;
-  border-bottom: 3px solid rgba(50, 50, 50, 70);
-}
-
-.divider-block {
-  width: 5em;
-  border-bottom: 10px solid var(--blue);
-}
-
 @media screen and (min-width: 800px) {
   .project-grid {
     grid-template-columns: 5fr 1fr;

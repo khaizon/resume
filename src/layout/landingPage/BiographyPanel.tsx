@@ -199,7 +199,7 @@ export default function BiographyPanel() {
             }}
             autoplay={{
               delay: 4000,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             }}
             modules={[Pagination, Autoplay]}
           >

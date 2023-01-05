@@ -1,12 +1,13 @@
+import Divider from './Divider';
 import './PanelTitle.css';
 
-interface DividerProps {
+interface PanelTitleProps {
   alignLeft: boolean;
   subtitle: string;
   title: string;
 }
 
-export default function PanelTitle({ alignLeft, subtitle, title }: DividerProps) {
+export default function PanelTitle({ alignLeft, subtitle, title }: PanelTitleProps) {
   const moveLeft = {
     marginRight: alignLeft ? '0px' : '5px',
   };
@@ -24,15 +25,7 @@ export default function PanelTitle({ alignLeft, subtitle, title }: DividerProps)
           {title}
         </div>
       </div>
-      <div
-        className="divider"
-        style={{
-          alignItems: alignLeft ? 'flex-start' : 'flex-end',
-        }}
-      >
-        <div className="divider-line" style={moveLeft}></div>
-        <div className="divider-block" style={moveLeft}></div>
-      </div>
+      <Divider alignLeft={alignLeft} />
     </div>
   );
 }

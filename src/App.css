@@ -151,16 +151,14 @@
   font-size: 140px;
   font-weight: 900;
   line-height: 140px;
-  background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img3.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .image-text {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent !important;
+  background-image: url(https://demo.crocoblock.com/rg/wp-content/uploads/2018/05/richard-img3.png);
+  background-position: center center;
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;

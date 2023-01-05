@@ -1,5 +1,6 @@
 import { useLoaderData, useNavigate } from 'react-router-dom';
-import PanelTitle from '../components/PanelTitle';
+import './Projects.css';
+import Divider from '../components/Divider';
 
 export const getAllProjects = async () => {
   const response = await fetch(`${import.meta.env.BASE_URL}/projects/projectsData.json`);
@@ -14,22 +15,9 @@ export default function Projects() {
 
   return (
     <div className="projects">
-      <div className="projects-top">
-        <div className="projects-title">
-          <PanelTitle alignLeft={false} subtitle="All Projects" title="My Projects" />
-        </div>
-        <div className="projects-number">
-          <div
-            className="panel-number image-text"
-            style={{
-              backgroundImage: `url(${import.meta.env.BASE_URL}/yp.jpeg)`,
-            }}
-          >
-            02
-          </div>
-        </div>
-      </div>
-      <div className="projects-bottom">
+      <div className="projects-title image-text">Projects</div>
+      <Divider alignLeft padding="1rem" />
+      <div className="projects-grid">
         {projects.map((project: any, index: number) => [
           <div className="project-image" key={index + '1'}>
             <img src={import.meta.env.BASE_URL + project.image} alt="project" />

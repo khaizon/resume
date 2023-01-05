@@ -1,4 +1,4 @@
-.projects {
+.projects-panel {
   background-color: var(--background);
   padding: 3em;
   display: flex;
@@ -6,19 +6,19 @@
   align-items: center;
 }
 
-.projects-top {
+.projects-panel-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    '. projects-number'
-    'projects-title projects-title';
+    '. projects-panel-number'
+    'projects-panel-title projects-panel-title';
   width: 100%;
   align-items: center;
   margin-bottom: 2em;
 }
 
-.projects-title {
-  grid-area: projects-title;
+.projects-panel-title {
+  grid-area: projects-panel-title;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -26,21 +26,15 @@
   gap: 1em;
 }
 
-.projects-number {
-  grid-area: projects-number;
+.projects-panel-number {
+  grid-area: projects-panel-number;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.biography-text {
-  width: 100%;
-  font-family: Lato;
-  font-size: 0.9em;
-}
-
-.projects-bottom {
+.projects-panel-bottom {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
@@ -119,14 +113,14 @@
 }
 
 @media screen and (min-width: 550px) {
-  .projects-top {
+  .projects-panel-top {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      '. projects-number .'
-      'projects-title projects-title projects-title';
+      '. projects-panel-number .'
+      'projects-panel-title projects-panel-title projects-panel-title';
     width: min(90%, 1000px);
   }
-  .projects-bottom {
+  .projects-panel-bottom {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
@@ -135,19 +129,19 @@
     justify-content: flex-end;
     grid-column: span 2;
   }
-  .projects-title {
+  .projects-panel-title {
     margin-top: 0px;
   }
 }
 
 @media screen and (min-width: 800px) {
-  .projects-top {
+  .projects-panel-top {
     grid-template-columns: 3fr 2fr;
-    grid-template-areas: 'projects-title projects-number';
+    grid-template-areas: 'projects-panel-title projects-panel-number';
     width: min(90%, 1000px);
     gap: 5rem;
   }
-  .projects-bottom {
+  .projects-panel-bottom {
     grid-template-columns: repeat(3, 1fr);
     width: min(90%, 1000px);
     gap: 2rem;
@@ -156,7 +150,7 @@
     grid-row: 1;
     grid-column: span 1;
   }
-  .projects-title {
+  .projects-panel-title {
     margin-top: 0px;
   }
 }
