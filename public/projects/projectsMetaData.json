@@ -3,18 +3,24 @@
     "title": "Panorama",
     "description": "A Yelp clone built with React and Typescript",
     "date": "07 Jan 2022",
-    "image": "/capstone.png"
+    "thumbnail": "/capstone.png",
+    "id": "panorama",
+    "featured": true
   },
   {
     "title": "Yelpington",
     "description": "A Yelp clone built with React and Typescript",
     "date": "07 Jan 2022",
-    "image": "/yp.jpeg"
+    "thumbnail": "/yp.jpeg",
+    "id": "panorama",
+    "featured": true
   },
   {
     "title": "Yelpington",
     "description": "A Yelp clone built with React and Typescript",
     "date": "07 Jan 2022",
-    "image": "/yp.jpeg"
+    "thumbnail": "/yp.jpeg",
+    "id": "panorama",
+    "featured": false
   }
 ]

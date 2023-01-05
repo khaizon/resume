@@ -6,6 +6,7 @@ import './index.css';
 import LandingPage from './layout/landingPage/LandingPage';
 import SingleProject, { getProject } from './layout/SingleProject';
 import Projects, { getAllProjects } from './layout/Projects';
+import { getRecentProjects } from './layout/landingPage/ProjectsPanel';
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <div>NOT FOUND</div>,
     children: [
-      { path: '', element: <LandingPage /> },
+      { path: '', element: <LandingPage />, loader: getRecentProjects },
       {
         path: 'projects',
         element: <Projects />,

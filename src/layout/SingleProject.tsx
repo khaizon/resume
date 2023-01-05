@@ -12,7 +12,7 @@ import ProjectMedia from '../components/ProjectMedia';
 import Divider from '../components/Divider';
 
 export const getProject = async ({ params }: any) => {
-  const response = await fetch(`${import.meta.env.BASE_URL}/projects/${params.id}.json`);
+  const response = await fetch(`${import.meta.env.BASE_URL}projects/${params.id}.json`);
   const project = await response.json();
   return { project };
 };

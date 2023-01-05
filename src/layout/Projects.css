@@ -15,25 +15,7 @@
   box-sizing: border-box;
 }
 
-.projects-grid {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 1rem;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
 @media screen and (min-width: 550px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  .project-image {
-    height: 100%;
-    justify-content: flex-end;
-    grid-column: span 2;
-  }
   .projects-panel-title {
     margin-top: 0px;
   }
@@ -42,16 +24,6 @@
 @media screen and (min-width: 800px) {
   .max-width-container {
     width: min(90%, 1000px);
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 2rem;
-  }
-  .project-image {
-    grid-row: 1;
-    grid-column: span 1;
   }
   .projects-panel-title {
     margin-top: 0px;

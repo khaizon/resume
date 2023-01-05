@@ -1,43 +1,22 @@
 import './ProjectsPanel.css';
 import PanelTitle from '../../components/PanelTitle';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLoaderData } from 'react-router-dom';
+import ProjectsGrid from '../../components/ProjectsGrid';
 
-interface project {
-  title: string;
-  description: string;
-  date: string;
-  image: string;
-}
-
-const projects: Array<project> = [
-  {
-    title: 'Panorama',
-    description: 'A Yelp clone built with React and Typescript',
-    date: '07 Jan 2022',
-    image: '/capstone.png',
-  },
-  {
-    title: 'Yelpington',
-    description: 'A Yelp clone built with React and Typescript',
-    date: '07 Jan 2022',
-    image: '/yp.jpeg',
-  },
-  {
-    title: 'Yelpington',
-    description: 'A Yelp clone built with React and Typescript',
-    date: '07 Jan 2022',
-    image: '/yp.jpeg',
-  },
-];
+export const getRecentProjects = async () => {
+  const response = await fetch(`${import.meta.env.BASE_URL}/projects/projectsMetaData.json`);
+  const projects = await response.json();
+  return { projects };
+};
 
 export default function ProjectsPanel() {
   const navigate = useNavigate();
-
+  const { projects }: any = useLoaderData();
   return (
     <div className="projects-panel">
       <div className="projects-panel-top">
         <div className="projects-panel-title">
-          <PanelTitle alignLeft={false} subtitle="Latest Works" title="My Projects" />
+          <PanelTitle alignLeft={false} subtitle="Featured Works" title="My Projects" />
         </div>
         <div className="projects-panel-number">
           <div
@@ -51,23 +30,7 @@ export default function ProjectsPanel() {
         </div>
       </div>
       <div className="projects-panel-bottom">
-        {projects.map((project, index) => [
-          <div className="project-image" key={index + '1'}>
-            <img src={import.meta.env.BASE_URL + project.image} alt="project" />
-          </div>,
-          <div
-            className="project-text"
-            key={index + '2'}
-            onClick={() => {
-              navigate(import.meta.env.BASE_URL + `projects/${project.title}`);
-            }}
-          >
-            <div className="project-name">{project.title}</div>
-            <div className="project-description">{project.description}</div>
-            <div className="project-divider" />
-            <div className="project-date">{project.date}</div>
-          </div>,
-        ])}
+        <ProjectsGrid projects={projects.filter((project: any) => project.featured)} />
       </div>
       <button
         className="view-all-button"
