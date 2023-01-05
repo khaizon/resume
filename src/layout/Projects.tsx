@@ -15,26 +15,28 @@ export default function Projects() {
 
   return (
     <div className="projects">
-      <div className="projects-title image-text">Projects</div>
-      <Divider alignLeft padding="1rem" />
-      <div className="projects-grid">
-        {projects.map((project: any, index: number) => [
-          <div className="project-image" key={index + '1'}>
-            <img src={import.meta.env.BASE_URL + project.image} alt="project" />
-          </div>,
-          <div
-            className="project-text"
-            key={index + '2'}
-            onClick={() => {
-              navigate(import.meta.env.BASE_URL + `projects/${project.title}`);
-            }}
-          >
-            <div className="project-name">{project.title}</div>
-            <div className="project-description">{project.description}</div>
-            <div className="project-divider" />
-            <div className="project-date">{project.date}</div>
-          </div>,
-        ])}
+      <div className="max-width-container">
+        <div className="projects-title image-text">My Projects</div>
+        <Divider alignLeft padding="1rem" />
+        <div className="projects-grid">
+          {projects.map((project: any, index: number) => [
+            <div className="project-image" key={index + '1'}>
+              <img src={import.meta.env.BASE_URL + project.image} alt="project" />
+            </div>,
+            <div
+              className="project-text"
+              key={index + '2'}
+              onClick={() => {
+                navigate(import.meta.env.BASE_URL + `projects/${project.title}`);
+              }}
+            >
+              <div className="project-name">{project.title}</div>
+              <div className="project-description">{project.description}</div>
+              <div className="project-divider" />
+              <div className="project-date">{project.date}</div>
+            </div>,
+          ])}
+        </div>
       </div>
     </div>
   );

@@ -210,12 +210,7 @@ export default function BiographyPanel() {
               <div className="biography-text">{EDUCATION_HTML}</div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="biography-text">
-                {CAREER_HTML}
-                <a href={import.meta.env.BASE_URL + 'resume.pdf'} rel="noopener noreferrer" target="_blank">
-                  <button>PDF</button>
-                </a>
-              </div>
+              <div className="biography-text">{CAREER_HTML}</div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="biography-text">
