@@ -1,9 +1,25 @@
 [
   {
     "title": "Panorama",
-    "description": "A Yelp clone built with React and Typescript",
+    "description": "A Dashboard-Chatbot Hybrid to Facilitate MRO Planning",
     "date": "07 Jan 2022",
-    "thumbnail": "/capstone.png",
+    "thumbnail": "/projects/panorama/capstoneVideoThumb.png",
+    "id": "panorama",
+    "featured": true
+  },
+  {
+    "title": "Cashier App",
+    "description": "A cashier application for maomaothinks",
+    "date": "07 Jan 2022",
+    "thumbnail": "/projects/maomaocashier/maomaocashier.png",
+    "id": "panorama",
+    "featured": true
+  },
+  {
+    "title": "DynaGO DB",
+    "description": "A Dynamo DB clone built with React and Golang",
+    "date": "07 Jan 2022",
+    "thumbnail": "/projects/dynagoDB/dynagoDB.png",
     "id": "panorama",
     "featured": true
   },
@@ -11,24 +27,8 @@
     "title": "Yelpington",
     "description": "A Yelp clone built with React and Typescript",
     "date": "07 Jan 2022",
-    "thumbnail": "/yp.jpeg",
+    "thumbnail": "/projects/dynagoDB/dynagoDB.png",
     "id": "panorama",
-    "featured": true
-  },
-  {
-    "title": "Yelpington",
-    "description": "A Yelp clone built with React and Typescript",
-    "date": "07 Jan 2022",
-    "thumbnail": "/yp.jpeg",
-    "id": "panorama",
-    "featured": true
-  },
-  {
-    "title": "Yelpington",
-    "description": "A Yelp clone built with React and Typescript",
-    "date": "07 Jan 2022",
-    "thumbnail": "/yp.jpeg",
-    "id": "panorama",
-    "featured": true
+    "featured": false
   }
 ]

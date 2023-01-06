@@ -1,3 +1,5 @@
+import './ProjectMedia.css';
+
 interface ProjectMediaProps {
   media: {
     isLocal: boolean;
@@ -9,15 +11,23 @@ interface ProjectMediaProps {
 }
 
 export default function ProjectMedia({ media }: ProjectMediaProps) {
+  let mediaElement: any;
   if (!media.isLocal && media.isVideo) {
-    return <iframe width="100%" height="100%" src={media.src} />;
+    mediaElement = <iframe width="100%" height="100%" src={media.src} allowFullScreen />;
   } else if (media.isLocal && media.isVideo) {
-    return (
+    mediaElement = (
       <video width="100%" height="100%" controls>
         <source src={import.meta.env.BASE_URL + media.src} type="video/mp4" />
       </video>
     );
   } else {
-    return <img src={import.meta.env.BASE_URL + media.src} alt={media.description} />;
+    mediaElement = <img src={import.meta.env.BASE_URL + media.src} alt={media.description} />;
   }
+
+  return (
+    <div className="project-media">
+      <div className="project-media-container">{mediaElement}</div>
+      <div className="project-media-description">{media.description}</div>
+    </div>
+  );
 }

@@ -17,6 +17,7 @@ export default function Projects() {
       <div className="max-width-container">
         <div className="projects-title image-text">My Projects</div>
         <Divider alignLeft padding="1rem" />
+        <br />
         <ProjectsGrid projects={projects} />
       </div>
     </div>
