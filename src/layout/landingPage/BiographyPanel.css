@@ -96,6 +96,10 @@
   overflow: scroll;
 }
 
+.resume button {
+  color: white;
+}
+
 p a {
   color: var(--blue);
   text-decoration: none;

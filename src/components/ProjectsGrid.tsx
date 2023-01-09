@@ -25,7 +25,7 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
               navigate(import.meta.env.BASE_URL + `projects/${project.id}`);
             }}
           >
-            <img src={import.meta.env.BASE_URL + project.thumbnail} alt="project" />
+            <img src={import.meta.env.BASE_URL + project.thumbnail} alt={project.title} />
           </div>
           <div
             className="project-text"
