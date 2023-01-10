@@ -10,9 +10,9 @@
   {
     "title": "Cashier App",
     "description": "A cashier application for maomaothinks",
-    "date": "07 Jan 2022",
+    "date": "24 June 2022",
     "thumbnail": "/projects/maomaocashier/maomaocashier.png",
-    "id": "panorama",
+    "id": "maomaocashier",
     "featured": true
   },
   {
@@ -20,7 +20,7 @@
     "description": "A Dynamo DB clone built with React and Golang",
     "date": "07 Jan 2022",
     "thumbnail": "/projects/dynagoDB/dynagoDB.png",
-    "id": "panorama",
+    "id": "dynagoDB",
     "featured": true
   },
   {
@@ -28,7 +28,7 @@
     "description": "A Yelp clone built with React and Typescript",
     "date": "07 Jan 2022",
     "thumbnail": "/projects/dynagoDB/dynagoDB.png",
-    "id": "panorama",
+    "id": "dynagoDB",
     "featured": false
   }
 ]

@@ -16,7 +16,7 @@ export default function ProjectMedia({ media }: ProjectMediaProps) {
     mediaElement = <iframe width="100%" height="100%" src={media.src} allowFullScreen />;
   } else if (media.isLocal && media.isVideo) {
     mediaElement = (
-      <video width="100%" height="100%" controls>
+      <video width="100%" height="100%" controls autoPlay muted>
         <source src={import.meta.env.BASE_URL + media.src} type="video/mp4" />
       </video>
     );
