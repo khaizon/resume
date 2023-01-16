@@ -4,7 +4,7 @@ import { useNavigate, useLoaderData } from 'react-router-dom';
 import ProjectsGrid from '../../components/ProjectsGrid';
 
 export const getRecentProjects = async () => {
-  const response = await fetch(`${import.meta.env.BASE_URL}/projects/projectsMetaData.json`);
+  const response = await fetch(`${import.meta.env.BASE_URL}projects/projectsMetaData.json`);
   const projects = await response.json();
   return { projects };
 };
@@ -22,7 +22,7 @@ export default function ProjectsPanel() {
           <div
             className="panel-number image-text"
             style={{
-              backgroundImage: `url(${import.meta.env.BASE_URL}/yp.jpeg)`,
+              backgroundImage: `url(${import.meta.env.BASE_URL}yp.jpeg)`,
             }}
           >
             02

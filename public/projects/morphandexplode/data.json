@@ -4,10 +4,17 @@
   "duration": "Jan 22 - May 22",
   "gallery": [
     {
+      "isLocal": true,
+      "isVideo": false,
+      "src": "projects/morphandexplode/morphNexplode.gif",
+      "description": "Demo GIF",
+      "thumbnail": "projects/morphandexplode/morphNexplode.gif"
+    },
+    {
       "isLocal": false,
       "isVideo": true,
       "src": "https://www.youtube.com/embed/UGbaeqW5Lys?autoplay=1&mute=1",
-      "description": "Youtube Video",
+      "description": "Full Video Demonstration",
       "thumbnail": "projects/morphandexplode/videothumb.png"
     }
   ],
