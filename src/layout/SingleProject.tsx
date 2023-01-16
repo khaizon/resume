@@ -104,10 +104,11 @@ export default function SingleProject() {
             </Swiper>
           </div>
           <div className="single-project-description">{project.description}</div>
+          <div className="single-project-duration">{project.duration}</div>
           <div className="project-links">
             Relevant Links:
             {project.relevantLinks.map((link: any, index: number) => (
-              <div className="link">
+              <div className="link" key={index}>
                 <li>
                   <a href={(link.islocal ? import.meta.env.BASE_URL : '') + link.url} target="_blank" rel="noreferrer">
                     {link.title}

@@ -1,6 +1,7 @@
 {
   "title": "DynagoDB",
   "subtitle": "An amazon dynamoDB clone implemented in GoLang",
+  "duration": "Jan 22 - May 22",
   "gallery": [
     {
       "isLocal": true,
@@ -39,14 +40,19 @@
       "isLocal": false
     },
     {
-      "title": "Module Website",
-      "url": "https://istd.sutd.edu.sg/undergraduate/courses/50041-distributed-systems-computing",
-      "isLocal": false
-    },
-    {
       "title": "Project Report",
       "url": "projects/dynagoDB/project_report.pdf",
       "isLocal": true
+    },
+    {
+      "title": "Project Slides",
+      "url": "projects/dynagoDB/project_presentation.pdf",
+      "isLocal": true
+    },
+    {
+      "title": "Course Info",
+      "url": "https://istd.sutd.edu.sg/undergraduate/courses/50041-distributed-systems-computing",
+      "isLocal": false
     }
   ]
 }

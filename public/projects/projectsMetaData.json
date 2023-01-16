@@ -24,11 +24,11 @@
     "featured": true
   },
   {
-    "title": "Yelpington",
-    "description": "A Yelp clone built with React and Typescript",
-    "date": "07 Jan 2022",
-    "thumbnail": "/projects/dynagoDB/dynagoDB.png",
-    "id": "dynagoDB",
+    "title": "Morph & Explode",
+    "description": "A particle system that morphs and explodes",
+    "date": "11 Aug 2022",
+    "thumbnail": "/projects/morphandexplode/morphandexplode.png",
+    "id": "morphandexplode",
     "featured": false
   }
 ]

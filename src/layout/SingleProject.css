@@ -17,7 +17,8 @@
     'divider'
     'project-gallery'
     'project-thumbnail'
-    'project-description'
+    'project-description
+    'project-duration'
     'project-links';
   gap: 1rem;
   padding: 1rem;
@@ -144,6 +145,11 @@
   width: 100%;
   text-align: left;
 }
+.single-project-duration {
+  grid-area: project-duration;
+  width: 100%;
+  text-align: left;
+}
 
 .project-links {
   grid-area: project-links;
@@ -170,7 +176,8 @@
       'project-subtitle project-subtitle'
       'divider divider'
       'project-gallery project-thumbnail'
-      'project-description project-links';
+      'project-description project-links'
+      'project-duration project-links';
     grid-template-rows: auto auto auto 25rem auto 1fr;
   }
 

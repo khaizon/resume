@@ -12,6 +12,8 @@
 
 .project-media-description {
   height: 10%;
+  font-family: Lato;
+  letter-spacing: 0.05rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
